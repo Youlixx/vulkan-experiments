@@ -1,7 +1,11 @@
-#include "../base/VulkanTest.hpp"
+#include "../base/Window.hpp"
 
 int main() {
-    vktest::run();
+    vkexp::Window window{1280, 720, "window!!"};
+
+    while (!window.shouldClose()) {
+        glfwPollEvents();
+    }
 
     return 0;
 }
